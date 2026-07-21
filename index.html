@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raji Ridwan Olalekan | Portfolio</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <h2>Portfolio</h2>
+
+           <button class="menu-btn" id="menuBtn"> ☰ </button>
+    
+        <ul id="navLinks">
+            <a href="#home">Home</a>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+
+        <h1>Hello, I'm</h1>
+
+        <h2>Raji Ridwan Olalekan </h2>
+
+        <p>
+            Aspiring Front-End Developer
+        </p>
+
+
+         <p>
+            I build responsive websites
+         </p>
+       <a href="#projects" class="btn" id="projectBtn">View My Projects</a>
+
+       <div class="hero-buttons">
+
+    <a href="https://github.com/olamilekanr876-cpu" target="_blank">
+        View GitHub
+    </a>
+
+    <a href="resume.pdf" download>
+    Download Resume
+</a>
+
+</div>
+
+    </section>
+
+
+
+        <!-- About Section -->
+    <section id="about" class="about">
+
+      <h2>About Me</h2>
+
+      <p>
+        Hi, I'm Raji Ridwan Olalekan. I am an aspiring Front-End Developer who enjoys
+        building responsive and user-friendly websites using HTML, CSS, and JavaScript.
+
+        I am continuously improving my skills by working on projects and learning modern
+        web development technologies.
+
+        My goal is to become a professional software developer and contribute to building
+        useful digital solutions.
+      </p>
+
+</section>
+<!-- Skills Section -->
+<section id="skills" class="skills">
+
+    <h2>My Skills</h2>
+
+    <div class="skills-container">
+
+        <div class="skill-card">
+            <h3>HTML5</h3>
+            <p>Building the structure of web pages.</p>
+        </div>
+
+        <div class="skill-card">
+            <h3>CSS3</h3>
+            <p>Designing beautiful and responsive layouts.</p>
+        </div>
+
+        <div class="skill-card">
+            <h3>JavaScript</h3>
+            <p>Making websites interactive and dynamic.</p>
+        </div>
+
+        <div class="skill-card">
+            <h3>Git & GitHub</h3>
+            <p>Managing code and collaborating on projects.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact">
+
+    <h2>Contact Me</h2>
+
+    <form id="contactForm">
+
+        <div class="input-group">
+
+            <label for="name">Name</label>
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Enter your name"
+            >
+
+        </div>
+
+        <div class="input-group">
+
+            <label for="email">Email</label>
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Enter your email"
+            >
+
+        </div>
+
+        <div class="input-group">
+
+            <label for="message">Message</label>
+
+            <textarea
+                id="message"
+                rows="6"
+                placeholder="Write your message">
+            </textarea>
+
+        </div>
+
+        <button type="submit">
+            Send Message
+        </button>
+
+        <p id="successMessage"></p>
+
+    </form>
+
+</section>
+
+
+<section id="projects">
+
+    <h2>My Projects</h2>
+
+    <div id="projectContainer"></div>
+
+</section>
+
+<section id="skills">
+
+    <h2>My Skills</h2>
+
+    <div id="skillsContainer"></div>
+
+</section>
+
+
+
+
+    
+
+<script src="script.js"></script>
+
+</body>
+</html>
