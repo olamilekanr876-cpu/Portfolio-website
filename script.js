@@ -118,7 +118,7 @@ for(let i = 0; i < skills.length; i++){
         <div class="skill-card">
             ${skills[i]}
         </div>
-
+i
     `;
 
 }
