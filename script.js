@@ -50,53 +50,58 @@ contactForm.addEventListener("submit", function(event){
     }
 
 });
-
-
 const projects = [
     {
         title: "Calculator",
         description: "Built with HTML, CSS and JavaScript",
-        image: "calculator.png",
-        link: "https://github.com/yourusername/calculator"
+        image: "images/calculator.png",
+        demo: "#",
+        link: "https://github.com/olamilekanr876-cpu/Portfolio-website"
     },
 
     {
         title: "Todo App",
-        description: "Task management application",
-        image: "todo.png",
-        link: "https://github.com/yourusername/todo-app"
+        description: "Task management application built with HTML, CSS and JavaScript.",
+        image: "images/todo.png",
+        demo: "https://olamilekanr876-cpu.github.io/Todo-App/",
+        link: "https://github.com/olamilekanr876-cpu/Todo-App"
     },
 
     {
         title: "Weather App",
         description: "Uses Fetch API to display weather",
-        image: "weather.png",
-        link: "https://github.com/yourusername/weather-app"
+        image: "images/weather.png",
+        demo: "#",
+        link: "https://github.com/olamilekanr876-cpu/Portfolio-website"
     }
 ];
+
+const projectContainer = document.getElementById("projectContainer");
 
 
 
 for (let i = 0; i < projects.length; i++) {
+projectContainer.innerHTML += `
+<div class="project-card">
 
-    projectContainer.innerHTML += `
+    <img src="${projects[i].image}" alt="${projects[i].title}" class="project-image">
 
-    <div class="project-card">
+    <h3>${projects[i].title}</h3>
 
-        <img src="${projects[i].image}" alt="${projects[i].title}">
+    <p>${projects[i].description}</p>
 
-        <h3>${projects[i].title}</h3>
-
-        <p>${projects[i].description}</p>
-
-        <a href="${projects[i].link}" target="_blank">
-            View Project
+    <div class="project-buttons">
+        <a href="${projects[i].demo}" target="_blank" class="project-btn">
+            Live Demo
         </a>
 
+        <a href="${projects[i].link}" target="_blank" class="project-btn">
+            View Code
+        </a>
     </div>
 
-    `;
-
+</div>
+`;
 }
 
 const skills = [
@@ -118,7 +123,7 @@ for(let i = 0; i < skills.length; i++){
         <div class="skill-card">
             ${skills[i]}
         </div>
-i
+
     `;
 
 }
