@@ -69,7 +69,7 @@ const projects = [
 
     {
         title: "Weather App",
-        description: "Uses Fetch API to display weather",
+        description: "A responsive weather application built with HTML, CSS, and JavaScript that fetches real-time weather data using the OpenWeather API. Users can search for any city and view temperature, weather conditions, humidity, wind speed, and weather icons.",
         image: "images/weather.png",
         demo: "#",
         link: "https://github.com/olamilekanr876-cpu/Portfolio-website"
