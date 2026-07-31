@@ -67,13 +67,13 @@ const projects = [
         link: "https://github.com/olamilekanr876-cpu/Todo-App"
     },
 
-    {
-        title: "Weather App",
-        description: "A responsive weather application built with HTML, CSS, and JavaScript that fetches real-time weather data using the OpenWeather API. Users can search for any city and view temperature, weather conditions, humidity, wind speed, and weather icons.",
-        image: "images/weather.png",
-        demo: "#",
-        link: "https://github.com/olamilekanr876-cpu/Portfolio-website"
-    }
+ {
+    title: "Weather App",
+    description: "Weather application built with HTML, CSS, JavaScript and Fetch API.",
+    image: "images/weather.png",
+    demo: "https://olamilekanr876-cpu.github.io/Weather-App/",
+    link: "https://github.com/olamilekanr876-cpu/Weather-App"
+}
 ];
 
 const projectContainer = document.getElementById("projectContainer");
