@@ -2,78 +2,83 @@
 
     const projectBtn = document.getElementById("projectBtn");
 
-projectBtn.addEventListener("click", function () {
+if(projectBtn){
+    projectBtn.addEventListener("click", function () {
 
-    const projectsSection = document.getElementById("projects");
+        const projectsSection = document.getElementById("projects");
 
-    projectsSection.scrollIntoView({
-        behavior: "smooth"
+        projectsSection.scrollIntoView({
+            behavior: "smooth"
+        });
+
     });
-
-});
-
+}
 const menuBtn = document.getElementById("menuBtn");
 
 const navLinks = document.getElementById("navLinks");
 
 
-menuBtn.addEventListener("click", function(){
+if(menuBtn){
+    menuBtn.addEventListener("click", function(){
 
-    navLinks.classList.toggle("active");
+        navLinks.classList.toggle("active");
 
-});
+    });
+}
 
 
 
 const contactForm = document.getElementById("contactForm");
 
-contactForm.addEventListener("submit", function(event){
+if(contactForm){
 
-    event.preventDefault();
+    contactForm.addEventListener("submit", function(event){
 
-    const name = document.getElementById("name").value;
+        event.preventDefault();
 
-    const email = document.getElementById("email").value;
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const message = document.getElementById("message").value;
 
-    const message = document.getElementById("message").value;
+        if(name === "" || email === "" || message === ""){
 
-    if(name === "" || email === "" || message === ""){
+            alert("Please fill in all fields.");
 
-        alert("Please fill in all fields.");
+        }else{
 
-    }else{
+            alert("Message sent successfully!");
 
-        alert("Message sent successfully!");
+            contactForm.reset();
 
-        contactForm.reset();
+        }
 
-    }
+    });
 
-});
+}
 const projects = [
     {
         title: "Calculator",
-        description: "Built with HTML, CSS and JavaScript",
-        image: "images/calculator.png",
+        description: "A responsive calculator built with HTML, CSS and JavaScript. It performs basic arithmetic operations with a clean and user-friendly interface.",
+        image: "images/todo.png",
         demo: "#",
-        link: "https://github.com/olamilekanr876-cpu/Portfolio-website"
+        link: "https://github.com/olamilekanr876-cpu/Calculator"
     },
 
     {
         title: "Todo App",
-        description: "Task management application built with HTML, CSS and JavaScript.",
+        description: "A task management application that allows users to add and delete tasks dynamically using JavaScript DOM manipulation.",
         image: "images/todo.png",
         demo: "https://olamilekanr876-cpu.github.io/Todo-App/",
         link: "https://github.com/olamilekanr876-cpu/Todo-App"
     },
 
- {
-    title: "Weather App",
-    description: "Weather application built with HTML, CSS, JavaScript and Fetch API.",
-    image: "images/weather.png",
-    demo: "https://olamilekanr876-cpu.github.io/Weather-App/",
-    link: "https://github.com/olamilekanr876-cpu/Weather-App"
-}
+    {
+        title: "Weather App",
+        description: "A weather application that uses the Fetch API to retrieve and display real-time weather information for any city.",
+        image: "images/weather.png",
+        demo: "https://olamilekanr876-cpu.github.io/Weather-App/",
+        link: "https://github.com/olamilekanr876-cpu/Weather-App"
+    }
 ];
 
 const projectContainer = document.getElementById("projectContainer");
@@ -105,26 +110,56 @@ projectContainer.innerHTML += `
 }
 
 const skills = [
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "Git",
-    "GitHub"
-];
+    {
+        title: "Frontend",
+        items: [
+            "HTML5",
+            "CSS3",
+            "JavaScript (ES6)"
+        ]
+    },
 
+    {
+        title: "Version Control",
+        items: [
+            "Git",
+            "GitHub"
+        ]
+    },
+
+    {
+        title: "Tools",
+        items: [
+            "VS Code",
+            "Chrome DevTools"
+        ]
+    }
+];
 
 const skillsContainer = document.getElementById("skillsContainer");
 
+skills.forEach(skill => {
 
-for(let i = 0; i < skills.length; i++){
+    let items = "";
+
+    skill.items.forEach(item => {
+        items += `<li>${item}</li>`;
+    });
+
+//     skillsContainer.innerHTML += `
+// <div style="background:red;color:white;padding:20px;margin:20px;">
+//     TEST SKILL
+// </div>
+// `;
 
     skillsContainer.innerHTML += `
-
         <div class="skill-card">
-            ${skills[i]}
-        </div>
+            <h3>${skill.title}</h3>
 
+            <ul>
+                ${items}
+            </ul>
+        </div>
     `;
 
-}
-
+});
