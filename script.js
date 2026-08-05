@@ -56,13 +56,13 @@ if(contactForm){
 
 }
 const projects = [
-    {
-        title: "Calculator",
-        description: "A responsive calculator built with HTML, CSS and JavaScript. It performs basic arithmetic operations with a clean and user-friendly interface.",
-        image: "images/todo.png",
-        demo: "#",
-        link: "https://github.com/olamilekanr876-cpu/Calculator"
-    },
+   {
+    title: "Calculator",
+    description: "A responsive calculator built with HTML, CSS and JavaScript. Supports keyboard input and basic arithmetic operations.",
+    image: "images/calculator.png",
+    demo: "https://olamilekanr876-cpu.github.io/Calculator/",
+    link: "https://github.com/olamilekanr876-cpu/Calculator"
+},
 
     {
         title: "Todo App",
